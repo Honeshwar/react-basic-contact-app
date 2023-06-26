@@ -12,7 +12,7 @@ basic contact app following CRUD operation with an API
 ## How i started
 
 - First of all i use command `npx create-react-app <my-project>`
-- Then i create this folder strucure show above
+- Then i create this folder structure show above
 - Then i create a `AddContact component` and `ContactList component` and add this two component in `App component`
 - then i create create `Contact component` and add to `ContactList component`
 
@@ -35,7 +35,7 @@ more details:
 ### CRUD Operation with API
 
 - to create and read , use <https://jsonplaceholder.typicode.com/users>
-- to updat and delete , use <https://jsonplaceholder.typicode.com/users/id>, id=1,2,.....
+- to update and delete , use <https://jsonplaceholder.typicode.com/users/id>, id=1,2,.....
 
 ## Screenshots
 
