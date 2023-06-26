@@ -1,6 +1,24 @@
 # React-basic-contact-app
 
-basic contact appfollowing CRUD operation with an API
+basic contact app following CRUD operation with an API
+
+## Folder Structure
+
+- components
+- styles
+- context
+- customHooks
+
+## How i started
+
+- First of all i use command `npx create-react-app <my-project>`
+- Then i create this folder strucure show above
+- Then i create a `AddContact component` and `ContactList component` and add this two component in `App component`
+- then i create create `Contact component` and add to `ContactList component`
+
+- Then i create context
+
+- Then i create custom hook
 
 ## Features
 
