@@ -1,0 +1,115 @@
+/* display list style */
+.contact-list {
+  margin: auto;
+  margin-top: 40px;
+  width: 500px;
+  height: 60%;
+  overflow-y: scroll;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.contact-list ul {
+  list-style: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* all contact style */
+.contact {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  font-family: sans-serif;
+  border-top: 2px solid gray;
+  background-color: rgb(9, 36, 45);
+  position: relative;
+}
+/* on edit style */
+.contact-edit {
+  width: 70%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+.contact-edit input {
+  font-size: 1rem;
+}
+
+/* button style in edit */
+#cancel-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background-color: rgb(210, 125, 15);
+  color: white;
+  padding: 5px 10px;
+}
+#cancel-btn:hover {
+  background-color: rgb(126, 73, 4);
+}
+
+.contact-edit button {
+  padding: 5px;
+  font-size: 1rem;
+  background-color: rgb(234, 204, 166);
+}
+.contact-edit button:hover {
+  color: white;
+  background-color: rgb(138, 80, 4);
+}
+
+/* on unEdit style */
+.contact-unEdit {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  color: white;
+}
+.contact-unEdit-text {
+  width: 70%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-edit input {
+  background-color: lightblue;
+  padding: 5px;
+  /* border: none; */
+  color: black;
+  margin-block: 10px;
+}
+
+/* contact info style */
+.contact-unEdit-text h3,
+.contact-unEdit-text p {
+  display: flex;
+  align-items: center;
+}
+
+.contact-unEdit-text h3 img,
+.contact-unEdit-text p img {
+  margin-right: 20px;
+}
+
+/* unEdit style */
+.contact-unEdit button {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* image in button style and normal icon image style */
+img {
+  width: 40px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+img:hover {
+  transform: scale(1.2);
+}

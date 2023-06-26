@@ -1,0 +1,54 @@
+
+
+/* add contact form style */
+.addContact {
+  margin: auto;
+  /* width: 50%; */
+  width: 320px;
+  height: 130px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+.addContact div input {
+  padding: 5px;
+  margin: 7px;
+  font-size: 1rem;
+}
+.addContact div input:focus {
+  outline: none;
+  border: solid lightblue;
+  box-shadow: 0 0 2px 2px lightblue;
+  border-radius: 5px;
+}
+
+/* form btn or non form btn style */
+.addContact button,
+#add-contact-btn {
+  margin: 5px;
+  padding: 10px;
+  background-color: lightblue;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+
+  box-shadow: 0 0 5px 2px black;
+}
+
+.addContact button:hover,
+.add-contact-btn:hover {
+  background-color: rgb(9, 118, 155);
+  color: white;
+}
+
+/* close form button */
+#close-form {
+  position: absolute;
+  right: 40%;
+  bottom: -60px;
+  padding: 5px;
+  background-color: rgb(169, 5, 5);
+  color: white;
+}

@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2018/02/14/12/44/business-cards-3152885_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: move 2s ease-in-out 0s infinite alternate;
+}
+/* background body animation */
+@keyframes move {
+  0% {
+    background-position: top;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+/* app component */
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.445);
+  text-align: center;
+}
+/* App heading */
+.App h1 {
+  color: rgb(21, 13, 1);
+  padding: 10px;
+}
+
+/* all button cursor pointer */
+button {
+  cursor: pointer;
+}
