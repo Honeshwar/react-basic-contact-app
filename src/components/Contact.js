@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useContextValue } from "../context/customProvider";
+import { useContextValue } from "../context/contactProvider";
 import useContactHook from "../customHook/contactHook";
 
 export default function Contact({ contact }) {

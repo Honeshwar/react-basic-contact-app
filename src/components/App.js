@@ -1,4 +1,4 @@
-import CustomProvider from "../context/customProvider";
+import ContactProvider from "../context/contactProvider";
 import AddContact from "./AddContact";
 import ContactList from "./ContactList";
 
@@ -10,10 +10,10 @@ export default function App() {
   return (
     <div className="App">
       <h1>Contact</h1>
-      <CustomProvider>
+      <ContactProvider>
         <AddContact />
         <ContactList />
-      </CustomProvider>
+      </ContactProvider>
     </div>
   );
 }

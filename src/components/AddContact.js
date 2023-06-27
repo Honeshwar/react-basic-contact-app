@@ -1,6 +1,6 @@
 import { useState } from "react";
 import useContactHook from "../customHook/contactHook";
-import { useContextValue } from "../context/customProvider";
+import { useContextValue } from "../context/contactProvider";
 
 
 export default function AddContact(props) {
@@ -17,12 +17,17 @@ export default function AddContact(props) {
   });
 
   // submit form data to an API
-  const submitHandler = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
+    
     addContact({
       name,
       phone
     });
-    setIsClickAddContact(false);
+    setName('');
+    setPhone('');
+    // setIsClickAddContact(false);
+
   };
 
   return (
@@ -41,7 +46,7 @@ export default function AddContact(props) {
             <input
               onInput={(e) => setPhone(e.target.value)}
               value={phone}
-              type="tel"
+              type="number"
               placeholder="Enter your number"
             />
           </div>
