@@ -1,6 +1,7 @@
 import { useState } from "react";
-import useContactHook from "../customHook/contactHook";
-import { useContextValue } from "../context/contactProvider";
+
+import { useContextValue } from "../context/contactsProvider";
+import useFormInputHook from "../customHook/formInputHook";
 
 
 export default function AddContact(props) {
@@ -11,7 +12,7 @@ export default function AddContact(props) {
   const [isClickAddContact, setIsClickAddContact] = useState(false);
 
   //using custom hook for form input
-  const { name, setName, phone, setPhone } = useContactHook({
+  const { name, setName, phone, setPhone } = useFormInputHook({
     name: "",
     phone: ""
   });

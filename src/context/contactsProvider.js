@@ -35,6 +35,7 @@ export default function ContactsProvider({ children }) {
       .then((response) => response.json())
       .then((res) => {
         const newContacts = contacts.filter((contact) => contact.id !== contactId);
+        console.log('selte',newContacts);
         setContacts(newContacts);
       });
   };
@@ -62,16 +63,29 @@ export default function ContactsProvider({ children }) {
           }
           return element;
         });
+
+        console.log('U selte',newContacts);
         setContacts(newContacts);
       });
   };
 
   // add contact
   const addContact = (newContact) => {
+
+    const Ids = contacts.map((contact)=>contact.id);
+    let nextId=0;
+    Ids.forEach((id)=>{
+      if(id>nextId){
+        nextId=id;
+      }
+    });
     const newContacts = {
-      id: contacts.length + 1,
+      id: nextId + 1,
       ...newContact
     };
+    
+    console.log('next id', newContact);
+
     const configureObj = {
       method: "POST",
       body: JSON.stringify(newContacts),
@@ -82,6 +96,8 @@ export default function ContactsProvider({ children }) {
     fetch("https://jsonplaceholder.typicode.com/users", configureObj)
       .then((response) => response.json())
       .then((res) => {
+        const result=[newContacts, ...contacts];
+        console.log('A selte',result);
         setContacts([newContacts, ...contacts]);
       });
   };

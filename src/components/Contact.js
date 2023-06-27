@@ -1,56 +1,25 @@
 import { useState } from "react";
-import { useContextValue } from "../context/contactProvider";
-import useContactHook from "../customHook/contactHook";
+import { useContextValue } from "../context/contactsProvider";
+import useFormInputHook from "../customHook/formInputHook";
+import UpdateContactForm from "./UpdateContactForm";
 
 export default function Contact({ contact }) {
   //get value form context
-  const { deleteContact, updateContact } = useContextValue();
+  const { deleteContact } = useContextValue();
 
   // creating state for editing and non-editing logic
   const [editing, setEditing] = useState(false);
 
-  //using custom hook for form input
-  const {
-    name: updatedName,
-    setName: setUpdatedName,
-    phone: updatedPhone,
-    setPhone: setUpdatedPhone
-  } = useContactHook({ name: contact.name, phone: contact.phone });
-
-  //handle delete
-  const handleDelete = () => {
-    deleteContact(contact.id);
-  };
-  //handle update
-  const handleUpdate = () => {
-    updateContact(contact.id, {
-      id: contact.id,
-      name: updatedName,
-      phone: updatedPhone
-    });
-    setEditing(false);
-  };
+    //handle delete
+    const handleDelete = () => {
+      console.log('delete contact',contact);
+      deleteContact(contact.id);
+    };
 
   return (
-    <div className="contact">
+    <div className="contact" data={contact.id}>
       {editing ? (
-        <div className="contact-edit">
-          <input
-            value={updatedName}
-            onChange={(e) => setUpdatedName(e.target.value)}
-            placeholder="Enter your name"
-          />
-          <input
-            value={updatedPhone}
-            onChange={(e) => setUpdatedPhone(e.target.value)}
-            placeholder="Enter your phone number"
-          />
-          <button id="cancel-btn" onClick={() => setEditing(false)}>
-            {" "}
-            X
-          </button>
-          <button onClick={handleUpdate}>Save</button>
-        </div>
+       <UpdateContactForm contact={contact} setEditing={setEditing}/>
       ) : (
         <div className="contact-unEdit">
           <div className="contact-unEdit-text">

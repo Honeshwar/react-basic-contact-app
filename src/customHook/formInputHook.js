@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function useContactHook(initialState) {
+export default function useFormInputHook(initialState) {
   const [name, setName] = useState(initialState.name);
   const [phone, setPhone] = useState(initialState.phone);
 
